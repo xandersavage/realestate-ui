@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./chat.scss";
 
-const Chat = () => {
+function Chat() {
   const [chat, setChat] = useState(true);
   return (
     <div className="chat">
@@ -13,7 +13,7 @@ const Chat = () => {
             alt=""
           />
           <span>John Doe</span>
-          <p>Hello</p>
+          <p>Lorem ipsum dolor sit amet...</p>
         </div>
         <div className="message">
           <img
@@ -21,7 +21,7 @@ const Chat = () => {
             alt=""
           />
           <span>John Doe</span>
-          <p>Hello</p>
+          <p>Lorem ipsum dolor sit amet...</p>
         </div>
         <div className="message">
           <img
@@ -29,7 +29,7 @@ const Chat = () => {
             alt=""
           />
           <span>John Doe</span>
-          <p>Hello</p>
+          <p>Lorem ipsum dolor sit amet...</p>
         </div>
         <div className="message">
           <img
@@ -37,7 +37,7 @@ const Chat = () => {
             alt=""
           />
           <span>John Doe</span>
-          <p>Hello</p>
+          <p>Lorem ipsum dolor sit amet...</p>
         </div>
         <div className="message">
           <img
@@ -45,7 +45,7 @@ const Chat = () => {
             alt=""
           />
           <span>John Doe</span>
-          <p>Hello</p>
+          <p>Lorem ipsum dolor sit amet...</p>
         </div>
         <div className="message">
           <img
@@ -53,7 +53,7 @@ const Chat = () => {
             alt=""
           />
           <span>John Doe</span>
-          <p>Hello</p>
+          <p>Lorem ipsum dolor sit amet...</p>
         </div>
       </div>
       {chat && (
@@ -66,38 +66,48 @@ const Chat = () => {
               />
               John Doe
             </div>
-            <span className="close" onClick={() => setChat(false)}>
-              X
-            </span>
+            <span className="close" onClick={()=>setChat(null)}>X</span>
           </div>
           <div className="center">
+            <div className="chatMessage">
+              <p>Lorem ipsum dolor sit amet</p>
+              <span>1 hour ago</span>
+            </div>
             <div className="chatMessage own">
-              <p>Hello world</p>
-              <span>12:00</span>
+              <p>Lorem ipsum dolor sit amet</p>
+              <span>1 hour ago</span>
             </div>
             <div className="chatMessage">
-              <p>Hello world</p>
-              <span>12:00</span>
+              <p>Lorem ipsum dolor sit amet</p>
+              <span>1 hour ago</span>
             </div>
             <div className="chatMessage own">
-              <p>Hello world</p>
-              <span>12:00</span>
+              <p>Lorem ipsum dolor sit amet</p>
+              <span>1 hour ago</span>
             </div>
             <div className="chatMessage">
-              <p>Hello world</p>
-              <span>12:00</span>
+              <p>Lorem ipsum dolor sit amet</p>
+              <span>1 hour ago</span>
             </div>
             <div className="chatMessage own">
-              <p>Hello world</p>
-              <span>12:00</span>
+              <p>Lorem ipsum dolor sit amet</p>
+              <span>1 hour ago</span>
             </div>
             <div className="chatMessage">
-              <p>Hello world</p>
-              <span>12:00</span>
+              <p>Lorem ipsum dolor sit amet</p>
+              <span>1 hour ago</span>
             </div>
             <div className="chatMessage own">
-              <p>Hello world</p>
-              <span>12:00</span>
+              <p>Lorem ipsum dolor sit amet</p>
+              <span>1 hour ago</span>
+            </div>
+            <div className="chatMessage">
+              <p>Lorem ipsum dolor sit amet</p>
+              <span>1 hour ago</span>
+            </div>
+            <div className="chatMessage own">
+              <p>Lorem ipsum dolor sit amet</p>
+              <span>1 hour ago</span>
             </div>
           </div>
           <div className="bottom">
@@ -108,6 +118,6 @@ const Chat = () => {
       )}
     </div>
   );
-};
+}
 
 export default Chat;

@@ -36,7 +36,8 @@
   .bottom {
     display: flex;
     justify-content: space-between;
-    grid-area: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 
     button {
       width: 100px;

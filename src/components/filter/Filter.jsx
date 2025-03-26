@@ -1,6 +1,6 @@
 import "./filter.scss";
 
-const Filter = () => {
+function Filter() {
   return (
     <div className="filter">
       <h1>
@@ -13,7 +13,7 @@ const Filter = () => {
             type="text"
             id="city"
             name="city"
-            placeholder="city location"
+            placeholder="City Location"
           />
         </div>
       </div>
@@ -47,11 +47,21 @@ const Filter = () => {
         </div>
         <div className="item">
           <label htmlFor="maxPrice">Max Price</label>
-          <input type="text" id="maxPrice" name="maxPrice" placeholder="any" />
+          <input
+            type="text"
+            id="maxPrice"
+            name="maxPrice"
+            placeholder="any"
+          />
         </div>
         <div className="item">
           <label htmlFor="bedroom">Bedroom</label>
-          <input type="text" id="bedroom" name="bedroom" placeholder="any" />
+          <input
+            type="text"
+            id="bedroom"
+            name="bedroom"
+            placeholder="any"
+          />
         </div>
         <button>
           <img src="/search.png" alt="" />
@@ -59,6 +69,6 @@ const Filter = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Filter;

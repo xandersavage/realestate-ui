@@ -8,9 +8,10 @@ function HomePage() {
         <div className="wrapper">
           <h1 className="title">Find Real Estate & Get Your Dream Place</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, quo
-            aliquid provident inventore ad soluta laborum quae culpa ex ea,
-            molestias illum vero fuga rerum et at. Nulla, illo eveniet.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+            explicabo suscipit cum eius, iure est nulla animi consequatur
+            facilis id pariatur fugit quos laudantium temporibus dolor ea
+            repellat provident impedit!
           </p>
           <SearchBar />
           <div className="boxes">
@@ -30,7 +31,7 @@ function HomePage() {
         </div>
       </div>
       <div className="imgContainer">
-        <img src="/bg.png" alt="image" />
+        <img src="/bg.png" alt="" />
       </div>
     </div>
   );
