@@ -1,43 +1,43 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const { currentUser } = useContext(AuthContext);
 
-  const user = true;
   return (
     <nav>
       <div className="left">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img src="/logo.png" alt="" />
           <span>LamaEstate</span>
-        </a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
+        </Link>
+        <Link to="/">Home</Link>
+        <Link to="/">About</Link>
+        <Link to="/">Contact</Link>
+        <Link to="/">Agents</Link>
       </div>
       <div className="right">
-        {user ? (
+        {currentUser ? (
           <div className="user">
-            <img
-              src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt=""
-            />
-            <span>John Doe</span>
+            <img src={currentUser.avatar || "/noAvatar.png"} alt="" />
+            <span>{currentUser.username}</span>
             <Link to="/profile" className="profile">
               <div className="notification">3</div>
               <span>Profile</span>
             </Link>
           </div>
         ) : (
-          <>
-            <a href="/">Sign in</a>
-            <a href="/" className="register">
+          <div className="auth-links">
+            <Link to="/login" className="sign-in">
+              Sign in
+            </Link>
+            <Link to="/register" className="register">
               Sign up
-            </a>
-          </>
+            </Link>
+          </div>
         )}
         <div className="menuIcon">
           <img
@@ -47,12 +47,18 @@ function Navbar() {
           />
         </div>
         <div className={open ? "menu active" : "menu"}>
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Contact</a>
-          <a href="/">Agents</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <Link to="/">Home</Link>
+          <Link to="/">About</Link>
+          <Link to="/">Contact</Link>
+          <Link to="/">Agents</Link>
+          {!currentUser ? (
+            <>
+              <Link to="/login">Sign in</Link>
+              <Link to="/register">Sign up</Link>
+            </>
+          ) : (
+            <Link to="/profile">Profile</Link>
+          )}
         </div>
       </div>
     </nav>
